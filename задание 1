@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<locale.h>
+int main()
+{
+	setlocale(LC_CTYPE, "RUS");
+	int n, m;
+	int s = 0;
+	int k = 1;
+
+	puts("Введите значение для числа n");
+	scanf("%d", &n);
+	puts("Введите значение для числа m");
+	scanf("%d", &m);
+	for (int i = m; i >= n; i--,k++)
+		s+= i;
+	
+	printf("выполнено %d раз", k++);
+	printf("результат %d", s);
+
+
+}
