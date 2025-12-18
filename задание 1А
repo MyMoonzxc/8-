@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<locale.h>
+#include<math.h>
+int main()
+{
+	setlocale(LC_CTYPE, "RUS");
+	int n, m,i;
+	int k = 1024;
+	int z=2 ;
+	float s;
+	puts("Введите значения для переменных n и m\n");
+	scanf("%d %d", &n, &m);
+	for ( i = m; i <= n; i++)
+		printf("2^%d=%d\n", i, (int)pow(2, i)),s=(float)pow(2,i)/k;
+	printf("Результат:%.1fK", s);
+	
+
+}
