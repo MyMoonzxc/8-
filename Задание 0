@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+int main()
+{
+	setlocale(LC_CTYPE, "RUS");
+	int chis;
+	printf("Введите кол-во символов:\n");
+	scanf("%d", &chis);
+	for (int start = 1; start <= chis; start++) putchar('*');
+
+	puts("\n");
+
+	for (int start = 1; start <= chis; start++)
+	{
+		if (start == 1) putchar('+');
+		putchar('*');
+		if (start == chis) putchar('+');
+	}
+	puts("\n");
+
+	for (int start = 1; start <= chis; start++)
+	{
+		int mid = chis / 2;
+		if (start <= mid) putchar('*');
+		if (start > mid) putchar('^');
+	}
+	puts("\n");
+
+	for (int start = 1; start <= chis; start++)
+	{
+		putchar('*');
+		putchar('!');
+	}
+}
