@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include<locale.h>
+
+int main()
+{
+    setlocale(LC_CTYPE, "RUS");
+    double step;
+
+    printf("f(x) = x^3 + 3x^2 - 3\n");
+    printf("Введите шаг: ");
+    scanf("%lf", &step);
+
+    printf("______________\n");
+    printf("|  x  |   f(x)   |\n");
+    printf("______________\n");
+
+    for (double x = 2.0; x <= 4.0; x += step)
+    {
+        double fx = pow(x, 3) + 3 * pow(x, 2) - 3;
+        printf("| %3.1f | %8.2f |\n", x, fx);
+    }
+
+    printf("______________\n");
+
+    return 0;
+}
